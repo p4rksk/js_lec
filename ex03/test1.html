@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>제이슨</h1>
+    <hr>
+
+    <script>
+        let user = {
+            id: 1,
+            username: "ssar",
+            password: "1234",
+            hobby: ["축구", "농구"]
+        }
+
+        //js object -> json string
+        let requestBody = JSON.stringify(user); //javascripte를 json으로 변환
+        console.log(requestBody);
+
+        //json string -> js object
+        let responseBody = JSON.parse(requestBody); //json을 js로 변환
+        console.log(responseBody);
+
+    </script>
+</body>
+
+</html>

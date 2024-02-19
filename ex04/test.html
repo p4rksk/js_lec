@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">이벤트 기본</h1>
+    <hr>
+    <button onclick="changeTitle()">제목 변경</button>
+
+
+    <script>
+        function changeTitle() {
+            //window는 생략가능하다. window.alert -> alert
+            alert("제목 변경 클릭 됨");
+
+            //ID는 문서에서 유일해야 함
+            //CLASS는 중복가능
+            //element==tag는 중복가능 (h1, div) 
+            let title = document.querySelector("#title");// querySelector는 무조건 한건을 출력하고 querySelectorAll은 여러건이 출력이 된다.
+            title.innerHTML = "반가워";
+        }
+    </script>
+</body>
+
+</html>

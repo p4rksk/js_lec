@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1급 객체 힙 메모리에 떠있다.
+
+        let m1 = function (n1, n2) {//익명 함수
+            console.log(n1 + n2);
+        }
+        m1(1, 2);
+
+
+        let m2 = (n1, n2) => { //람다식
+            console.log(n1 + n2);
+        }
+        m1(1, 2);
+
+        let m3 = (n1, n2) => n1 + n2; //람다표현식
+        let r3 = m3(1, 2);
+        console.log(r3);
+
+    </script>
+</body>
+
+</html>

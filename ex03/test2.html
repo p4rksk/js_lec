@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Stream 배열 다루기</h1>
+    <hr>
+    <script>
+        let arr = [1, 2, 3];
+
+        // 1. 값 추가(깊은 복사)
+        let copyArr = [0, ...arr, 4];
+        console.log(copyArr)
+
+        //2. 값 가공 (깊은복사)
+        let mapArr = arr.map(i => i * 2);
+        console.log(mapArr);
+
+        //3. 값 제거(필터)
+        let filterArr = arr.filter(i => i != 2);
+        console.log(filterArr);
+
+    </script>
+</body>
+
+</html>

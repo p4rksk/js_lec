@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">이벤트 두번째 버전</h1>
+    <hr>
+    <button id="btn-change">박선규</button>
+
+
+    <script>
+        let btn = document.querySelector("#btn-change");
+        btn.addEventListener("dblclick", changeTitle);
+
+        function changeTitle(e) {
+            console.log(e); //e 어떤 이벤트가 일어났는지 정보를 전달해 주는 애
+            let title = document.querySelector("#title");
+            title.innerHTML = e.target.innjerhtml;
+        }
+    </script>
+</body>
+
+</html>
