@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .card {
+            border: 1px solid lightgray;
+            box-shadow: 0 4px 4px 0 grey;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>반복문으로 리스트 만들기</h1>
+    <button onclick="render()">render</button>
+    <div class="box" id="outerBox">
+
+    </div>
+
+    <script>
+        function render() {
+            //     let el = document.querySelector("#outerBox");
+            //     for (let i = 1; i < 5; i++) {
+            //         el.append(makeCard(i));
+            //     }
+            for (let i = 1; i < 5; i++) {
+                $("#outerBox").append(makeCard(i));
+            }
+
+            $("#outerBox").append();
+        }
+
+
+        function makeCard(id) {
+
+
+            let card = `
+                <div class="card" id="card-${id}">
+                <h3>제목${id} 입니다</h3>
+                <p>내용${id} 입니다</p>
+                <button onclick="del(${id})">삭제</button>
+                </div>
+            `;
+            return card;
+        }
+        function del(id) {
+            $(`#card-${id}`).remove();
+        }
+    </script>
+</body>
+
+</html>
