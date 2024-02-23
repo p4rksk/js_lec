@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/join" onsubmit="return valid()">
+        <input id="username" type="text" name="username" onkeyup="check()">
+        <input type="text">
+        <button>회원가입</button>
+    </form>
+    <script>
+        let isCheck = false;
+
+        function valid() {
+            if (isCheck == false) {
+                alert("아이디 중복체크가 되지 않았습니다");
+            }
+            return isCheck;
+        }
+
+        function check() {
+            let username = $("#username").val();
+            if (username === "ssar") {
+                alert("아이디 중복체크가 완료되었습니다");
+                isCheck = true;
+            } else {
+                isCheck = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/join" onsubmit="return valid()"><!--onsubmit = 때에따라 서브밋을 설정할 수 있는 거-->
+        <input type="text" name="username" onkeyup="check()">
+        <button>회원가입</button>
+    </form>
+    <script>
+        let isCheck = false;
+
+        function valid() {
+            return isCheck;
+        }
+
+        function check() {
+            let username = $("#username").val();
+            if (username === "ssar") {
+                isCheck = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
